@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Input";
+}
+
+<h2>Input</h2>
+
+<style>
+    input{
+        margin: 5px;
+    }
+</style>
+
+<form action="/Nhanviens/Output" method="post">
+    <table>
+        <tr>
+            <td>Mã nhân viên: </td>
+            <td>
+                <input type="text" name="manv" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>Họ tên: </td>
+            <td>
+                <input type="text" name="hoten" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>Lương: </td>
+            <td>
+                <input type="text" name="luong" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>Thưởng: </td>
+            <td>
+                <input type="text" name="thuong" />
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Nhập" />
+            </td>
+        </tr>
+    </table>
+</form>
+

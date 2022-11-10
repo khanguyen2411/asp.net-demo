@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+
+<body>
+
+    <style>
+        li a{
+           color: black;
+           font-family: Arial;
+        }
+    </style>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container" style="margin: 0px; padding: 0px; width: inherit">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" style="background: #009999; text-align: center">
+                <label style="color: white; font-size: 30px; margin: 10px 0;">
+                    Kiểm tra 1 - Nguyễn Văn Trọng Khá
+                </label>
+            </div>
+            <div class="navbar-collapse collapse" style="background: #00CC99;">
+                <label style="color: black">
+                    @Html.ActionLink("Hiển thị danh sách", "Index", "Nhanviens", new { @style = "color: #000000; font-size: 20px; margin: 10px;" })
+                </label>
+
+                <label style="color: black">
+                    @Html.ActionLink("Nhập dữ liệu", "Input", "Nhanviens", new { @style = "color: #000000; font-size: 20px; margin: 10px;" })
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content" style="margin-top: 50px">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

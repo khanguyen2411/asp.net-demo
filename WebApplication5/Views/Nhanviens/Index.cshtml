@@ -1,0 +1,76 @@
+﻿
+@model WebApplication5.Models.Nhanvien[]
+
+@{
+    ViewBag.Title = "Danh sách nhân viên";
+}
+
+<style>
+    td {
+        padding: 5px;
+    }
+</style>
+
+<h3>Danh sách 1</h3>
+<table cellpadding="5" border="1">
+    <tr>
+        <td>Mã NV</td>
+        <td>Họ Tên</td>
+        <td>Lương</td>
+        <td>Thưởng</td>
+        <td>Thực nhận</td>
+    </tr>
+
+    @foreach (WebApplication5.Models.Nhanvien nv in ViewBag.list1)
+    {
+        <tr>
+            <td>
+                @nv.manv
+            </td>
+            <td>
+                @nv.hoten
+            </td>
+            <td>
+                @nv.luong
+            </td>
+            <td>
+                @nv.thuong
+            </td>
+            <td>
+                @nv.thucnhan
+            </td>
+        </tr>
+    }
+</table>
+
+<h3>Danh sách 2</h3>
+<table cellpadding="5" border="1">
+    <tr>
+        <td>Mã NV</td>
+        <td>Họ Tên</td>
+        <td>Lương</td>
+        <td>Thưởng</td>
+        <td>Thực nhận</td>
+    </tr>
+
+    @foreach (WebApplication5.Models.Nhanvien nv in ViewBag.list2)
+    {
+        <tr>
+            <td>
+                @nv.manv
+            </td>
+            <td>
+                @nv.hoten
+            </td>
+            <td>
+                @nv.luong
+            </td>
+            <td>
+                @nv.thuong
+            </td>
+            <td>
+                @nv.thucnhan
+            </td>
+        </tr>
+    }
+</table>
